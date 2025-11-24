@@ -1,0 +1,104 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f2f2f2;
+  color: #222;
+}
+
+.container { max-width: 820px; margin: 0 auto; }
+
+.page-head h1 { margin: 0 0 8px; text-align: center; font-size: 26px; }
+.page-head .note { margin: 0 0 16px; text-align: center; color: #666; font-size: 14px; }
+
+form {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+label { display: block; margin: 10px 0 6px; font-weight: bold; }
+.req { color: #c00; }
+.hint { margin: 0 0 8px; color: #666; font-size: 14px; }
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  background: #fff;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #0aa3e0;
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin: 12px 0;
+}
+legend { font-weight: bold; padding: 0 6px; }
+
+.radio-list label { display: block; margin: 6px 0; }
+
+/* Lưới phường đơn giản, vẫn responsive */
+.grid-radio {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(140px, 1fr));
+  gap: 6px;
+}
+.grid-radio label { display: flex; align-items: center; gap: 6px; }
+
+.check { display: flex; align-items: center; gap: 8px; margin-top: 10px; }
+.check.small { font-size: 14px; color: #666; }
+
+#tooltip { min-height: 20px; margin-top: 8px; color: #0aa3e0; font-style: italic; }
+.form-error { min-height: 20px; margin-top: 6px; color: #c00; font-weight: bold; }
+
+.actions { margin-top: 14px; }
+button {
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  background: #0aa3e0;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover { background: #0788bb; }
+
+.form-foot { margin-top: 12px; color: #666; font-size: 14px; }
+
+/* Tooltip nổi đơn giản */
+.tip-bubble {
+  position: absolute;
+  max-width: 300px;
+  background: #111;
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  display: none; /* ẩn mặc định */
+  z-index: 1000;
+}
+.tip-bubble::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  bottom: -6px;
+  border: 6px solid transparent;
+  border-top-color: #111;
+}
+
+@media (max-width: 640px) {
+  .grid-radio { grid-template-columns: repeat(2, 1fr); }
+}

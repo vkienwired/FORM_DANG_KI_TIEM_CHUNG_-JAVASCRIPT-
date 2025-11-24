@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>ĐĂNG KÝ TIÊM VẮC XIN COVID-19</title>
+  <link rel="stylesheet" href="vaccine_form.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="page-head">
+      <h1>ĐĂNG KÝ TIÊM VẮC XIN COVID-19</h1>
+      <p class="note">YÊU CẦU ĐÃ ĐĂNG KÝ RỒI, VUI LÒNG KHÔNG ĐĂNG KÝ LẠI<br/>
+      TIẾP NHẬN ĐĂNG KÝ CHO ĐẾN 14 GIỜ NGÀY 4/7/2021</p>
+    </header>
+
+    <form id="formDangKy" novalidate>
+      <!-- Tên đơn vị -->
+      <label for="ten_don_vi">Tên đơn vị <span class="req">*</span></label>
+      <input id="ten_don_vi" name="ten_don_vi" type="text" required
+             data-tip="Ghi đúng tên doanh nghiệp/Hộ kinh doanh theo Giấy ĐK kinh doanh." />
+
+      <!-- Mã số thuế -->
+      <label for="ma_so_thue">Mã số thuế <span class="req">*</span></label>
+      <input id="ma_so_thue" name="ma_so_thue" type="text" required
+             data-tip="Nhập chính xác MST của đơn vị." />
+
+      <!-- Địa chỉ chi tiết -->
+      <label for="dia_chi">Địa chỉ chi tiết (số nhà, đường) <span class="req">*</span></label>
+      <input id="dia_chi" name="dia_chi" type="text" required
+             data-tip="Ghi rõ số nhà, tên đường."/>
+
+      <!-- Ngành nghề -->
+      <fieldset>
+        <legend>Ngành nghề <span class="req">*</span></legend>
+        <p class="hint">Chọn ngành nghề đơn vị mình đang SXKD.</p>
+        <div class="radio-list" id="nganh_nghe" data-tip="Chọn đúng một nhóm ngành nghề.">
+          <!-- 1–15 theo ảnh -->
+          <label><input type="radio" name="nganh" value="1" required/> 1) Cung cấp nước</label>
+          <label><input type="radio" name="nganh" value="2"/> 2) Cung cấp thuốc, dịch vụ cho bệnh viện</label>
+          <label><input type="radio" name="nganh" value="3"/> 3) Bưu chính viễn thông (nhà mạng, truyền hình cáp, internet)</label>
+          <label><input type="radio" name="nganh" value="4"/> 4) Môi trường đô thị; các công ty, HTX thu gom rác dân lập</label>
+          <label><input type="radio" name="nganh" value="5"/> 5) Doanh nghiệp bình ổn giá</label>
+          <label><input type="radio" name="nganh" value="6"/> 6) Doanh nghiệp xăng dầu</label>
+          <label><input type="radio" name="nganh" value="7"/> 7) Dịch vụ ngân hàng, tài chính</label>
+          <label><input type="radio" name="nganh" value="8"/> 8) Vận tải, logistic</label>
+          <label><input type="radio" name="nganh" value="9"/> 9) Doanh nghiệp xúc tiến thương mại</label>
+          <label><input type="radio" name="nganh" value="10"/> 10) Doanh nghiệp công nghiệp (Cơ khí, dệt may, da giày, chế biến lương thực...)</label>
+          <label><input type="radio" name="nganh" value="11"/> 11) Du lịch</label>
+          <label><input type="radio" name="nganh" value="12"/> 12) Doanh nghiệp, cơ sở kinh doanh lương thực, thực phẩm, nhu yếu phẩm</label>
+          <label><input type="radio" name="nganh" value="13"/> 13) Các cơ sở sản xuất (bánh mì, mì, bột, ...)</label>
+          <label><input type="radio" name="nganh" value="14"/> 14) Doanh nghiệp sản xuất phần mềm</label>
+          <label><input type="radio" name="nganh" value="15"/> 15) Các doanh nghiệp, cơ sở kinh doanh dịch vụ khác (thương mại, ăn uống...)</label>
+        </div>
+      </fieldset>
+
+      <!-- Phường -->
+      <fieldset>
+        <legend>Phường <span class="req">*</span></legend>
+        <div class="grid-radio" id="phuong" data-tip="Chọn đúng phường của đơn vị.">
+          <label><input type="radio" name="phuong" value="1" required/> Phường 1</label>
+          <label><input type="radio" name="phuong" value="2"/> Phường 2</label>
+          <label><input type="radio" name="phuong" value="3"/> Phường 3</label>
+          <label><input type="radio" name="phuong" value="4"/> Phường 4</label>
+          <label><input type="radio" name="phuong" value="5"/> Phường 5</label>
+          <label><input type="radio" name="phuong" value="6"/> Phường 6</label>
+          <label><input type="radio" name="phuong" value="7"/> Phường 7</label>
+          <label><input type="radio" name="phuong" value="8"/> Phường 8</label>
+          <label><input type="radio" name="phuong" value="9"/> Phường 9</label>
+          <label><input type="radio" name="phuong" value="10"/> Phường 10</label>
+          <label><input type="radio" name="phuong" value="11"/> Phường 11</label>
+          <label><input type="radio" name="phuong" value="12"/> Phường 12</label>
+          <label><input type="radio" name="phuong" value="13"/> Phường 13</label>
+          <label><input type="radio" name="phuong" value="14"/> Phường 14</label>
+          <label><input type="radio" name="phuong" value="15"/> Phường 15</label>
+          <label><input type="radio" name="phuong" value="16"/> Phường 16</label>
+        </div>
+      </fieldset>
+
+      <!-- Quận -->
+      <label for="quan">Quận</label>
+      <input id="quan" name="quan" type="text" data-tip="Ghi tên quận (nếu có)."/>
+
+      <!-- Thống kê nhân sự -->
+      <label for="tong_ld">Tổng số người lao động tại đơn vị: <span class="req">*</span></label>
+      <input id="tong_ld" name="tong_ld" type="number" min="0" required
+             data-tip="Nhập tổng số lao động hiện có." />
+
+      <label for="da_tiem">Số người đã tiêm vắc xin COVID-19: <span class="req">*</span></label>
+      <input id="da_tiem" name="da_tiem" type="number" min="0" required
+             data-tip="Tính đến thời điểm đăng ký này." />
+
+      <label for="dong_thuan">Số người đồng thuận tiêm vắc xin COVID-19: <span class="req">*</span></label>
+      <input id="dong_thuan" name="dong_thuan" type="number" min="0" required
+             data-tip="Nhập số người đồng ý tiêm." />
+
+      <!-- Ghi chú -->
+      <label for="ghi_chu">Ghi chú (nếu có)</label>
+      <textarea id="ghi_chu" name="ghi_chu" rows="3"
+                data-tip="Ghi thêm thông tin cần lưu ý (nếu có)."></textarea>
+
+      <!-- Đại diện liên hệ -->
+      <label for="ho_ten_dd">Họ tên người đại diện, liên hệ <span class="req">*</span></label>
+      <input id="ho_ten_dd" name="ho_ten_dd" type="text" required
+             data-tip="Họ tên người phụ trách liên hệ." />
+
+      <label for="sdt">Số điện thoại <span class="req">*</span></label>
+      <input id="sdt" name="sdt" type="tel" inputmode="numeric" pattern="[0-9]{9,11}" required
+             data-tip="9–11 chữ số. Ví dụ: 0912345678." />
+
+      <label for="email">Email <span class="req">*</span></label>
+      <input id="email" name="email" type="email" required
+             data-tip="Email hợp lệ để nhận phản hồi." />
+
+      <!-- Tooltip + lỗi tổng -->
+      <div id="tooltip" aria-live="polite"></div>
+      <div id="formError" class="form-error" aria-live="polite"></div>
+
+      <!-- Nhận bản sao -->
+      <label class="check small">
+        <input id="send_copy" name="send_copy" type="checkbox"
+               data-tip="Chọn nếu muốn nhận bản sao phản hồi qua email." />
+        Send me a copy of my responses
+      </label>
+
+      <!-- Submit -->
+      <div class="actions">
+        <button type="submit">Submit</button>
+      </div>
+
+      <footer class="form-foot">
+        <p>Cảm ơn đã đăng ký thông tin và hợp tác này.<br/><strong>PHÒNG KINH TẾ/UBND QUẬN 11</strong></p>
+      </footer>
+    </form>
+  </main>
+
+  <script src="vaccine_form.js"></script>
+</body>
+</html>
